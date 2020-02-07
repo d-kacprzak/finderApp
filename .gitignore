@@ -1,0 +1,5 @@
+node_modules
+.idea
+.sass-cache
+Thumbs.db
+src/js/APP_KEY.js
