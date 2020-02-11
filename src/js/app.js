@@ -26,14 +26,14 @@ $(document).ready(() => {
       }).done((repos) => {
         $.each(repos, (index, val) => {
           $('#repos').append(`
-            <div class="card  mb-2 p-2">
+            <div class="card mb-2 p-2">
                 <div class="row col-12">
                     <div>
                         <strong>${val.name}</strong>
                         <span class="badge badge-info m-1 p-1">Forks: ${val.forks_count}</span>
                         <span class="badge badge-warning m-1 p-1">Watchers: ${val.watchers_count}</span>
                         <span class="badge badge-primary m-1 p-1">Stars: ${val.stargazers_count}</span>
-                        <span class="badge badge-danger m-1 p-1">language: ${val.language}</span>
+                        <span class="badge badge-danger m-1 p-1">language: ${(val.language) ? val.language : ''}</span>
                         <br>
                         
                     </div>
@@ -42,7 +42,7 @@ $(document).ready(() => {
                     <div class="col-md-9">
                         ${(val.description) ? val.description : desc}
                     </div>
-                    <div class="col-md-3 h-25">
+                    <div class="viewRepo col-md-3 h-25">
                         <a target="_blank" class="btn btn-outline-info" href="${val.html_url}">View Repo</a>
                      </div>
                 </div>
