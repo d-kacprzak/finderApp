@@ -3,3 +3,4 @@ node_modules
 .sass-cache
 Thumbs.db
 src/js/APP_KEY.js
+LICENSE
